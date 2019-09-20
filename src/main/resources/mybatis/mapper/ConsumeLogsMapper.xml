@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmql.zytj.mapper.ConsumeLogsMapper">
+    <insert id="insertConsumeLogs">
+        INSERT INTO consumelogs
+            (CardNo,
+             ReadRoomID,
+             InTime,
+             OutTime,
+             Status)
+        VALUES (#{cardNo},#{readRoomID},#{inTime},#{outTime},#{status});
+    </insert>
+    <select id="getConsumeLogsLastDataByCardNo" resultType="com.zmql.zytj.bean.ConsumeLogs">
+        SELECT ID,CardNo, ReadRoomID, InTime, OutTime, Status
+        FROM
+            consumelogs
+        WHERE
+            SUBSTRING_INDEX(InTime,' ',1)=CURDATE()
+        AND
+            CardNo=#{CardNO}
+        ORDER BY ID DESC
+    </select>
+    <update id="updateConsumeLogs">
+        UPDATE consumelogs 
+        <set>
+            <if test="cardNo!=null">CardNo=#{cardNo},</if>
+            <if test="readRoomID!=null">ReadRoomID=#{readRoomID},</if>
+            <if test="inTime!=null">InTime=#{inTime},</if>
+            <if test="outTime!=null">OutTime=#{outTime},</if>
+            <if test="status!=null">Status=#{status},</if>
+        </set>
+        WHERE ID=#{id}
+    </update>
+    <select id="statisticalResources" resultType="com.zmql.zytj.bean.ConsumeLogs">
+        SELECT ReadRoomID readRoomID,COUNT(ReadRoomID)  status
+        FROM consumelogs
+        WHERE (SUBSTRING_INDEX(InTime,' ',1)=CURDATE())
+        GROUP BY ReadRoomID
+    </select>
+</mapper>

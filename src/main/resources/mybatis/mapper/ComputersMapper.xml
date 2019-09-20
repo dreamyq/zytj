@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmql.zytj.mapper.ComputersMapper">
+    <resultMap id="BaseMap" type="com.zmql.zytj.bean.Computers">
+        <id column="ID" property="id"/>
+        <result column="Name" property="name"/>
+        <result column="IP" property="ip"/>
+        <result column="Remark" property="remark"/>
+        <association property="readroomid" column="ReadRoomID" javaType="com.zmql.zytj.bean.ReadRooms">
+            <id column="RId" property="id"/>
+            <result column="RName" property="name"/>
+            <result column="RRemark" property="remark"/>
+        </association>
+    </resultMap>
+    <select id="getComputerByIp" resultMap="BaseMap">
+        SELECT c.ID,c.`Name`,c.IP,c.ReadRoomID,c.Remark,r.ID AS RId,r.`Name` RName,r.Remark RRemark
+        FROM computers c
+        LEFT JOIN readrooms r
+        ON c.ReadRoomID=r.ID
+        WHERE IP=#{ip}
+    </select>
+</mapper>
