@@ -1,4 +1,4 @@
-package com.zmql.zytj.comentity;
+package com.zmql.zytj.bean;
 
 public class Memberships {
     private int id;

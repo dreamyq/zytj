@@ -1,4 +1,4 @@
-package com.zmql.zytj.service.imp;
+package com.zmql.zytj.service;
 
 public interface RoleService {
     /**

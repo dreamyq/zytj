@@ -1,4 +1,4 @@
-package com.zmql.zytj.comentity;
+package com.zmql.zytj.bean;
 
 public class ReadRooms {
     private int id;

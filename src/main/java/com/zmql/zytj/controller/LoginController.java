@@ -14,15 +14,12 @@ public class LoginController {
     public String login(@RequestParam("username") String username ,@RequestParam("password") String password, Map<String, Object> map, HttpSession session) {
         if (username.equals("admin")&&"123456".equals(password)) {
             session.setAttribute("user", username);
-            return "redirect:/main.html";
+            return "main";
         } else {
             map.put("msg", "用户名或密码错误");
-            return "enter";
+            return "login";
         }
     }
 
-    @RequestMapping("enter")
-    public String enterSys(){
-        return "login";
-    }
+
 }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmql.zytj.mapper.TeachersMapper">
+    <select id="queryAllTeacher" resultType="com.zmql.zytj.bean.TeachersExcel">
+        SELECT * from teachers
+    </select>
+
+    <insert id="addTeacher" parameterType="com.zmql.zytj.bean.TeachersExcel" keyProperty="id" useGeneratedKeys="true">
+
+        insert into teachers(CardNo,Name,Sex,SectionId) values (#{cardNo},#{name},#{sex},#{sectionId})
+
+    </insert>
+
+    <select id="querAllTeacherFy" resultType="com.zmql.zytj.bean.TeachersExcel" parameterType="com.zmql.zytj.bean.TeachersPage">
+        SELECT * from teachers
+        <where>
+            <if test="name!=null and name!='' ">Name LIKE"%"#{name}"%"</if>
+
+        </where>
+        limit #{page},#{rows}
+    </select>
+    <select id="queryAllTeachCount" resultType="java.lang.Integer" parameterType="com.zmql.zytj.bean.TeachersPage">
+        SELECT count(*) FROM teachers
+        <where>
+            <if test="name!=null and name!='' ">Name LIKE"%"#{name}"%"</if>
+
+        </where>
+    </select>
+    <update id="updateTeacher" parameterType="com.zmql.zytj.bean.TeachersExcel" >
+
+        update teachers set Name=#{name},Sex=#{sex} where ID=#{id}
+    </update>
+    <delete id="deleteTeacher" parameterType="java.lang.Integer">
+        DELETE  FROM  teachers WHERE ID=#{id}
+    </delete>
+
+
+</mapper>

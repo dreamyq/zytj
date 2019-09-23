@@ -1,14 +1,14 @@
-package com.zmql.zytj.comentity;
+package com.zmql.zytj.bean;
 
 import java.util.Date;
 
 public class ConsumeLogs {
     private int id;
-    private int CardNo;
-    private int ReadRoomID;
-    private Date InTime;
-    private Date OutTime;
-    private  String Status;
+    private int cardNo;
+    private int readRoomID;
+    private Date inTime;
+    private Date outTime;
+    private  String status;
 
     public int getId() {
         return id;
@@ -19,54 +19,42 @@ public class ConsumeLogs {
     }
 
     public int getCardNo() {
-        return CardNo;
+        return cardNo;
     }
 
     public void setCardNo(int cardNo) {
-        CardNo = cardNo;
+        this.cardNo = cardNo;
     }
 
     public int getReadRoomID() {
-        return ReadRoomID;
+        return readRoomID;
     }
 
     public void setReadRoomID(int readRoomID) {
-        ReadRoomID = readRoomID;
+        this.readRoomID = readRoomID;
     }
 
     public Date getInTime() {
-        return InTime;
+        return inTime;
     }
 
     public void setInTime(Date inTime) {
-        InTime = inTime;
+        this.inTime = inTime;
     }
 
     public Date getOutTime() {
-        return OutTime;
+        return outTime;
     }
 
     public void setOutTime(Date outTime) {
-        OutTime = outTime;
+        this.outTime = outTime;
     }
 
     public String getStatus() {
-        return Status;
+        return status;
     }
 
     public void setStatus(String status) {
-        Status = status;
-    }
-
-    @Override
-    public String toString() {
-        return "ConsumeLogs{" +
-                "id=" + id +
-                ", CardNo=" + CardNo +
-                ", ReadRoomID=" + ReadRoomID +
-                ", InTime=" + InTime +
-                ", OutTime=" + OutTime +
-                ", Status='" + Status + '\'' +
-                '}';
+        this.status = status;
     }
 }

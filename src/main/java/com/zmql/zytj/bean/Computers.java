@@ -1,10 +1,10 @@
-package com.zmql.zytj.comentity;
+package com.zmql.zytj.bean;
 
 public class Computers {
     private int id;
     private String name;
     private String ip;
-    private int readroomid;
+    private ReadRooms readroomid;
     private String remark;
 
     public int getId() {
@@ -31,11 +31,11 @@ public class Computers {
         this.ip = ip;
     }
 
-    public int getReadroomid() {
+    public ReadRooms getReadroomid() {
         return readroomid;
     }
 
-    public void setReadroomid(int readroomid) {
+    public void setReadroomid(ReadRooms readroomid) {
         this.readroomid = readroomid;
     }
 
@@ -46,17 +46,4 @@ public class Computers {
     public void setRemark(String remark) {
         this.remark = remark;
     }
-
-    @Override
-    public String toString() {
-        return "Computers{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", ip='" + ip + '\'' +
-                ", readroomid=" + readroomid +
-                ", remark='" + remark + '\'' +
-                '}';
-    }
-
-
 }

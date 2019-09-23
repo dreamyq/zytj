@@ -1,11 +1,11 @@
-package com.zmql.zytj.comentity;
+package com.zmql.zytj.bean;
 
 public class Statistics {
     private int id;
-    private int ReadRoomID;
-    private String PeopleNums;
-    private String Year;
-    private String Month;
+    private ReadRooms readRoomID;
+    private String peopleNums;
+    private String year;
+    private String month;
     private String day;
 
     public int getId() {
@@ -16,36 +16,36 @@ public class Statistics {
         this.id = id;
     }
 
-    public int getReadRoomID() {
-        return ReadRoomID;
+    public ReadRooms getReadRoomID() {
+        return readRoomID;
     }
 
-    public void setReadRoomID(int readRoomID) {
-        ReadRoomID = readRoomID;
+    public void setReadRoomID(ReadRooms readRoomID) {
+        this.readRoomID = readRoomID;
     }
 
     public String getPeopleNums() {
-        return PeopleNums;
+        return peopleNums;
     }
 
     public void setPeopleNums(String peopleNums) {
-        PeopleNums = peopleNums;
+        this.peopleNums = peopleNums;
     }
 
     public String getYear() {
-        return Year;
+        return year;
     }
 
     public void setYear(String year) {
-        Year = year;
+        this.year = year;
     }
 
     public String getMonth() {
-        return Month;
+        return month;
     }
 
     public void setMonth(String month) {
-        Month = month;
+        this.month = month;
     }
 
     public String getDay() {
@@ -54,17 +54,5 @@ public class Statistics {
 
     public void setDay(String day) {
         this.day = day;
-    }
-
-    @Override
-    public String toString() {
-        return "Statistics{" +
-                "id=" + id +
-                ", ReadRoomID=" + ReadRoomID +
-                ", PeopleNums='" + PeopleNums + '\'' +
-                ", Year='" + Year + '\'' +
-                ", Month='" + Month + '\'' +
-                ", day='" + day + '\'' +
-                '}';
     }
 }
