@@ -1,0 +1,39 @@
+2019-09-20 04:49:53.470  INFO 12024 --- [restartedMain] com.zmql.zytj.ZytjApplication            : Starting ZytjApplication on LAPTOP-LJ71576V with PID 12024 (D:\github-project\zytj\target\classes started by hero in D:\github-project\zytj)
+2019-09-20 04:49:53.470  INFO 12024 --- [restartedMain] com.zmql.zytj.ZytjApplication            : No active profile set, falling back to default profiles: default
+2019-09-20 04:49:54.327  INFO 12024 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-20 04:49:54.327  INFO 12024 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-09-20 04:49:54.330  INFO 12024 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2019-09-20 04:49:54.333  INFO 12024 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+2019-09-20 04:49:54.333  INFO 12024 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-09-20 04:49:54.333  INFO 12024 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-09-20 04:49:54.334  INFO 12024 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+2019-09-20 04:49:54.366  INFO 12024 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-20 04:49:54.514  INFO 12024 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2019-09-20 04:49:54.528  INFO 12024 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-20 04:49:54.601  INFO 12024 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-20 04:49:54.881  WARN 12024 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-20 04:49:54.970  INFO 12024 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-09-20 04:49:54.972  INFO 12024 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-09-20 04:49:54.972  INFO 12024 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.1 created.
+2019-09-20 04:49:54.972  INFO 12024 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-09-20 04:49:54.972  INFO 12024 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-09-20 04:49:54.972  INFO 12024 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-09-20 04:49:54.972  INFO 12024 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.1
+2019-09-20 04:49:54.972  INFO 12024 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@797d502
+2019-09-20 04:49:55.087  INFO 12024 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-09-20 04:49:55.100  INFO 12024 --- [restartedMain] com.zmql.zytj.ZytjApplication            : Started ZytjApplication in 1.7 seconds (JVM running for 154.566)
+2019-09-20 04:50:09.090  INFO 12024 --- [Thread-29] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-09-20 04:50:09.093  INFO 12024 --- [Thread-29] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2019-09-20 04:50:09.093  INFO 12024 --- [Thread-29] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-09-20 04:50:09.094  INFO 12024 --- [Thread-29] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2019-09-20 04:50:09.096  INFO 12024 --- [Thread-29] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+2019-09-20 04:50:09.097  INFO 12024 --- [Thread-29] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
