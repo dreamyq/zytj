@@ -1,8 +1,13 @@
 package com.zmql.zytj.mapper;
 
 import com.zmql.zytj.bean.ConsumeLogs;
+import java.util.List;
+
+import com.zmql.zytj.bean.ConsumeLogsExcel;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
+
 
 public interface ConsumeLogsMapper {
     /**
@@ -17,7 +22,7 @@ public interface ConsumeLogsMapper {
      * @param cardNO
      * @return
      */
-    ConsumeLogs getConsumeLogsLastDataByCardNo(int cardNO);
+    List<ConsumeLogs> getConsumeLogsLastDataByCardNo(int cardNO);
 
     /**
      * 修改数据为刷卡离开
@@ -30,4 +35,10 @@ public interface ConsumeLogsMapper {
      * @return
      */
     List<ConsumeLogs> statisticalResources();
+
+    /**
+     * 查询所有
+     * @return
+     */
+    List<ConsumeLogsExcel> getAllConsumeLogs();
 }

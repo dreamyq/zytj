@@ -13,7 +13,7 @@
         day
         )
         values
-        <foreach collection="list" item="item" index= "index" separator =",">
+        <foreach collection="list" item="item" index="index" separator=",">
             (
             #{item.readRoomID},
             #{item.status},
@@ -26,19 +26,22 @@
     </insert>
 
     <select id="getDataByYear" resultType="com.zmql.zytj.bean.Statistics">
-        SELECT ID,ReadRoomID,SUM(PeopleNums) peopleNums,Year,Month,day
+        SELECT ID,ReadRoomID readRoomID,SUM(PeopleNums) peopleNums,Year,Month,day
         FROM statistics
+        WHERE Year BETWEEN #{minYear} AND #{maxYear}
         GROUP BY ReadRoomID,Year
     </select>
     <select id="getDataByMonth" resultType="com.zmql.zytj.bean.Statistics">
-        SELECT *
+        SELECT ID,ReadRoomID readRoomID,SUM(PeopleNums) peopleNums,Year,Month,day
         FROM statistics
-        WHERE Year=#{month}
+        WHERE `Year`=#{year}
+        GROUP BY ReadRoomID,`Month`
     </select>
     <select id="getDataByDay" resultType="com.zmql.zytj.bean.Statistics">
-        SELECT *
+        SELECT ID,ReadRoomID readRoomID,SUM(PeopleNums) peopleNums,Year,Month,day
         FROM statistics
-        WHERE Month=#{day}
+        WHERE `Year`=#{year} AND `Month`=#{month}
+        GROUP BY ReadRoomID,`Month`
     </select>
 
 </mapper>

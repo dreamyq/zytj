@@ -1,6 +1,7 @@
 package com.zmql.zytj.service.imp;
 
 import com.zmql.zytj.bean.ConsumeLogs;
+import com.zmql.zytj.bean.ConsumeLogsExcel;
 import com.zmql.zytj.mapper.ConsumeLogsMapper;
 import com.zmql.zytj.service.ConsumeLogsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class ConsumeLogsServiceImpl implements ConsumeLogsService {
     }
 
     @Override
-    public ConsumeLogs getConsumeLogsLastDataByCardNo(int cardNO) {
+    public List<ConsumeLogs> getConsumeLogsLastDataByCardNo(int cardNO) {
         return consumeLogsMapper.getConsumeLogsLastDataByCardNo(cardNO);
     }
 
@@ -30,5 +31,10 @@ public class ConsumeLogsServiceImpl implements ConsumeLogsService {
     @Override
     public List<ConsumeLogs> statisticalResources() {
         return consumeLogsMapper.statisticalResources();
+    }
+
+    @Override
+    public List<ConsumeLogsExcel> getAllConsumeLogs() {
+        return consumeLogsMapper.getAllConsumeLogs();
     }
 }

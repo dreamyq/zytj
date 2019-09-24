@@ -2,7 +2,7 @@ package com.zmql.zytj.bean;
 
 public class Statistics {
     private int id;
-    private ReadRooms readRoomID;
+    private int readRoomID;
     private String peopleNums;
     private String year;
     private String month;
@@ -16,11 +16,11 @@ public class Statistics {
         this.id = id;
     }
 
-    public ReadRooms getReadRoomID() {
+    public int getReadRoomID() {
         return readRoomID;
     }
 
-    public void setReadRoomID(ReadRooms readRoomID) {
+    public void setReadRoomID(int readRoomID) {
         this.readRoomID = readRoomID;
     }
 

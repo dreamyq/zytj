@@ -13,4 +13,9 @@ public class RoleServiceImpl implements RoleService {
     public int judgeCardNO(int cardNO, String database) {
         return roleMapper.judgeCardNO(cardNO,database);
     }
+
+    @Override
+    public String getCardStatus(String database, Integer cardNO) {
+        return roleMapper.getCardStatus(database,cardNO);
+    }
 }

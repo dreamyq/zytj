@@ -39,4 +39,8 @@
         WHERE (SUBSTRING_INDEX(InTime,' ',1)=CURDATE())
         GROUP BY ReadRoomID
     </select>
+
+    <select id="getAllConsumeLogs" resultType="com.zmql.zytj.bean.ConsumeLogsExcel">
+        select * from  consumelogs
+    </select>
 </mapper>

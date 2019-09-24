@@ -18,8 +18,8 @@ public class StatisticsServiceImpl implements StatisticsService {
     }
 
     @Override
-    public List<Statistics> getDataByYear() {
-        return statisticsMapper.getDataByYear();
+    public List<Statistics> getDataByYear(String minYear,String maxYear) {
+        return statisticsMapper.getDataByYear(minYear, maxYear);
     }
 
     @Override
@@ -28,7 +28,9 @@ public class StatisticsServiceImpl implements StatisticsService {
     }
 
     @Override
-    public List<Statistics> getDataByDay(String day) {
-        return statisticsMapper.getDataByDay(day);
+    public List<Statistics> getDataByDay(String month, String year) {
+        return statisticsMapper.getDataByDay(month,year);
     }
+
+
 }

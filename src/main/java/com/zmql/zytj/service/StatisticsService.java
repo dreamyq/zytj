@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface StatisticsService {
     int insertStatistics(List<ConsumeLogs> data);
-    List<Statistics> getDataByYear();
+    List<Statistics> getDataByYear(String minYear,String maxYear);
     List<Statistics> getDataByMonth(String month);
-    List<Statistics> getDataByDay(String day);
+    List<Statistics> getDataByDay(String month,String year);
 }

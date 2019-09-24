@@ -8,5 +8,10 @@
         FROM ${database}
         WHERE CardNO=#{cardNO}
     </select>
+    <select id="getCardStatus" resultType="string">
+        SELECT status
+        FROM ${role}
+        WHERE CardNO=#{card}
+    </select>
 
 </mapper>

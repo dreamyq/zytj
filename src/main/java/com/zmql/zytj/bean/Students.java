@@ -2,13 +2,13 @@ package com.zmql.zytj.bean;
 
 public class Students {
     private int id;
-    private int CardNO;
-    private String Name;
-    private String Sex;
-    private int MembershipID;
-    private String Status;
-    private String Remark;
-    private int StuNo;
+    private int cardNO;
+    private String name;
+    private String sex;
+    private int membershipID;
+    private String status;
+    private String remark;
+    private int stuNo;
 
     public int getId() {
         return id;
@@ -19,72 +19,58 @@ public class Students {
     }
 
     public int getCardNO() {
-        return CardNO;
+        return cardNO;
     }
 
     public void setCardNO(int cardNO) {
-        CardNO = cardNO;
+        this.cardNO = cardNO;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getSex() {
-        return Sex;
+        return sex;
     }
 
     public void setSex(String sex) {
-        Sex = sex;
+        this.sex = sex;
     }
 
     public int getMembershipID() {
-        return MembershipID;
+        return membershipID;
     }
 
     public void setMembershipID(int membershipID) {
-        MembershipID = membershipID;
+        this.membershipID = membershipID;
     }
 
     public String getStatus() {
-        return Status;
+        return status;
     }
 
     public void setStatus(String status) {
-        Status = status;
+        this.status = status;
     }
 
     public String getRemark() {
-        return Remark;
+        return remark;
     }
 
     public void setRemark(String remark) {
-        Remark = remark;
+        this.remark = remark;
     }
 
     public int getStuNo() {
-        return StuNo;
+        return stuNo;
     }
 
     public void setStuNo(int stuNo) {
-        StuNo = stuNo;
-    }
-
-    @Override
-    public String toString() {
-        return "Students{" +
-                "id=" + id +
-                ", CardNO=" + CardNO +
-                ", Name='" + Name + '\'' +
-                ", Sex='" + Sex + '\'' +
-                ", MembershipID=" + MembershipID +
-                ", Status='" + Status + '\'' +
-                ", Remark='" + Remark + '\'' +
-                ", StuNo=" + StuNo +
-                '}';
+        this.stuNo = stuNo;
     }
 }

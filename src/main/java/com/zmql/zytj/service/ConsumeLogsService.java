@@ -1,12 +1,14 @@
 package com.zmql.zytj.service;
 
 import com.zmql.zytj.bean.ConsumeLogs;
+import com.zmql.zytj.bean.ConsumeLogsExcel;
+
 
 import java.util.List;
 
 public interface ConsumeLogsService {
     int insertConsumeLogs(ConsumeLogs consumeLogs);
-    ConsumeLogs getConsumeLogsLastDataByCardNo(int cardNO);
+    List<ConsumeLogs> getConsumeLogsLastDataByCardNo(int cardNO);
     /**
      * 修改数据为刷卡离开
      */
@@ -18,4 +20,7 @@ public interface ConsumeLogsService {
      * @return
      */
     List<ConsumeLogs> statisticalResources();
+
+    List<ConsumeLogsExcel> getAllConsumeLogs();
+
 }

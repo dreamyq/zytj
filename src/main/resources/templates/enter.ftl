@@ -15,13 +15,7 @@
     <div class="easyui-panel" title="欢迎进入${computer.readroomid.name}"
          style="width:100%;max-width:400px;padding:30px 60px;">
         <form id="ff">
-            <div style="margin-bottom:20px">
-                <select class="easyui-combobox" name="role" label="角色" style="width:100%">
-                    <option value="">----------请选择----------</option>
-                    <option value="Students">学生</option>
-                    <option value="Teachers">老师</option>
-                </select>
-            </div>
+
             <div style="margin-bottom:30px">
                 <input class="easyui-textbox" name="" id="cardNO" style="width:100%"
                        data-options="label:'输入卡号:',required:true">
@@ -35,16 +29,12 @@
     <script>
         function submitForm() {
             var cardNO = $('#cardNO').val();
-            var role = $("select").combobox('getValue');
             if (cardNO === '') {
                 alert("请输入卡号！");
-            }else if(role===''){
-                alert("请选择角色！");
             }else {
                 $.post('addEnterData', {
                     cardNO: cardNO,
-                    readroomid:${computer.readroomid.id},
-                    role:role
+                    readroomid:${computer.readroomid.id}
                 }, function (data) {
                     alert(data.msg);
                 })
